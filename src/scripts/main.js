@@ -8,8 +8,7 @@ for (const input of inputs) {
   }
 
   if (input.getAttribute('id') === null) {
-    input.setAttribute('id');
-    input.id = 'identification code';
+    input.id = 'identification code' + Math.random().toString(36).substr(2, 9);
   }
 
   const textOfPlaceholder = input.name;
