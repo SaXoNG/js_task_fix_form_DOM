@@ -3,6 +3,15 @@
 const inputs = Array.from(document.querySelectorAll('input'));
 
 for (const input of inputs) {
+  if (!input.name) {
+    input.name = 'input name is empty';
+  }
+
+  if (input.getAttribute('id') === null) {
+    input.setAttribute('id');
+    input.id = 'identification code';
+  }
+
   const textOfPlaceholder = input.name;
 
   input.setAttribute('placeholder', capitalizeText(textOfPlaceholder));
